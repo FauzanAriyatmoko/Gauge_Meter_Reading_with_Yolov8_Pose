@@ -1,0 +1,32 @@
+# ============================================
+# Gauge Config - Bar Gauge (0-25 bar)
+# ============================================
+# Configuration for pressure gauge with bar unit
+# Example: ALLWEILER brand gauge (test_image2.png)
+
+model:
+  path: "gauge_meter_analog_reading_realtime/models/gauge-pose.pt"
+  confidence: 0.5
+
+# Gauge calibration settings
+gauge:
+  min_value: 0        # Minimum reading value
+  max_value: 25       # Maximum reading value
+  min_angle: 224.6    # Angle (degrees) at min_value position (0 bar)
+  max_angle: -27      # Angle (degrees) at max_value position (25 bar)
+  unit: "bar"         # Unit of measurement
+
+# Input source configuration
+source:
+  type: "image"
+  path: "test_image2.png"
+  webcam_id: 0
+  rtsp_url: ""
+
+# Display settings
+display:
+  show_keypoints: true
+  show_angle: true
+  show_bbox: true
+  window_width: 800
+  window_height: 600

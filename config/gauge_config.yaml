@@ -1,0 +1,34 @@
+# ============================================
+# Gauge Meter Analog Reading - Configuration
+# ============================================
+# This is the default config file.
+# You can create separate configs for different gauge types
+# and select them via: --config <path>
+
+model:
+  path: "gauge_meter_analog_reading_realtime/models/gauge-pose.pt"
+  confidence: 0.5
+
+# Gauge calibration settings
+# Adjust these values based on your specific gauge
+gauge:
+  min_value: 0        # Minimum reading value
+  max_value: 10       # Maximum reading value
+  min_angle: 220      # Angle (degrees) at min_value position
+  max_angle: -27      # Angle (degrees) at max_value position
+  unit: "kg/cm2"      # Unit of measurement (adjustable per gauge type)
+
+# Input source configuration
+source:
+  type: "image"       # Options: "image", "webcam", "rtsp"
+  path: "test_image.png"   # Path to image file (for type: image)
+  webcam_id: 0        # Webcam device ID (for type: webcam)
+  rtsp_url: ""        # RTSP stream URL (for type: rtsp)
+
+# Display settings
+display:
+  show_keypoints: true
+  show_angle: true
+  show_bbox: true
+  window_width: 800
+  window_height: 600
