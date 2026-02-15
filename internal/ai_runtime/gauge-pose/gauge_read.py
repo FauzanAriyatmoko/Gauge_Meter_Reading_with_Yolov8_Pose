@@ -213,7 +213,7 @@ class GaugeReader:
             value = self.angle_to_value(angle)
 
             readings.append({
-                "value": round(value, 2),
+                "value": round(value, 3),
                 "angle": round(angle, 2),
                 "unit": self.unit,
                 "bbox": det["bbox"],
