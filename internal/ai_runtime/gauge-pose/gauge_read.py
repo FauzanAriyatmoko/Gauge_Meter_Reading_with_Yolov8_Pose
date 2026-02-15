@@ -275,7 +275,7 @@ class GaugeReader:
 
             # Draw reading text
             # Main value text with background
-            value_text = f"{value:.1f} {unit}"
+            value_text = f"{value:.3f} {unit}"
             text_size = cv2.getTextSize(value_text, cv2.FONT_HERSHEY_SIMPLEX, 0.9, 2)[0]
             text_x = x1
             text_y = y1 - 15
